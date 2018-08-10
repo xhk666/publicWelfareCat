@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
  * @time : 2018/8/9 19:51
  */
 @RestController
-@RequestMapping(value = "/user")
+@RequestMapping(value = "/user", produces = "application/json;charset=UTF-8")
 public class UserCtrl {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserCtrl.class);
     private final IUserService userService;
@@ -38,7 +38,7 @@ public class UserCtrl {
      */
     @RequestMapping(value = "/test")
     @ResponseBody
-    public String regist(@RequestParam("test") String test) {
+    public String test(@RequestParam("test") String test) {
         return ResJosnUtils.success();
     }
 }
