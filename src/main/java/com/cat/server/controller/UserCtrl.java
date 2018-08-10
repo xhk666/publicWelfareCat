@@ -33,6 +33,14 @@ public class UserCtrl {
         return registRes ? ResJosnUtils.success() : ResJosnUtils.fail();
     }
 
+    /**
+     * test 接口
+     */
+    @RequestMapping(value = "/test")
+    @ResponseBody
+    public String regist(@RequestParam("test") String test) {
+        return ResJosnUtils.success();
+    }
 }
 
 
